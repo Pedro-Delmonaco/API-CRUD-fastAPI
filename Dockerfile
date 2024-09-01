@@ -9,7 +9,7 @@ COPY requirements.txt .
 
 # Instale as dependências
 RUN pip install --no-cache-dir -r requirements.txt
-
+ 
 # Copie o código da aplicação para o contêiner
 COPY . /app
 
@@ -18,3 +18,4 @@ EXPOSE 8000
 
 # Defina o comando para rodar a aplicação
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+

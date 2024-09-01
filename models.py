@@ -1,7 +1,7 @@
 # app/models.py
 
 from sqlalchemy import Column, Integer, String
-from app.database import Base
+from database import Base
 
 class Item(Base):
     __tablename__ = "items"
@@ -10,3 +10,5 @@ class Item(Base):
     name = Column(String, index=True)
     description = Column(String, index=True)
     price = Column(Integer)
+
+ 

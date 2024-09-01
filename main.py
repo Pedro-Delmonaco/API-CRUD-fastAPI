@@ -15,7 +15,7 @@ fake_db = {}
 @app.post("/items/", response_model=Item)
 def create_item(item: Item):
     fake_db[item.name] = item
-    return item
+    return item 
 
 @app.get("/items/{item_name}", response_model=Item)
 def read_item(item_name: str):
